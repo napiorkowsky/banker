@@ -24,8 +24,15 @@ Nr konta można zapisać w różnych formatach:
 PL NN NNNN NNNN NNNN NNNN NNNN NNNN
 PLNNNNNNNNNNNNNNNNNNNNNNNNNN
 NN NNNN NNNN NNNN NNNN NNNN NNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNN```
+NNNNNNNNNNNNNNNNNNNNNNNNNN
 ```
 Do wyszukania numerów w pliku wystarczy jeden grep
 
 ``` grep -E "PL[0-9]{2}( [0-9]{4}){6}|(PL [0-9]{2}( [0-9]{4}){6})|PL[0-9]{26}|[0-9]{2}( [0-9]{4}){6}|[0-9]{26}" ```
+
+Wyniki działania zapisujemy do pliku accounts.txt, trzeba jeszcze wywalić "PL"-ki na początku wiersza, dobrze jeszcze przepuścić przez pajpa
+| sort | uniq
+
+## Uruchomienie
+W wierszu poleceń
+``` python3 -f banker.py | tee output.txt ```
