@@ -25,3 +25,7 @@ PL NN NNNN NNNN NNNN NNNN NNNN NNNN
 PLNNNNNNNNNNNNNNNNNNNNNNNNNN
 NN NNNN NNNN NNNN NNNN NNNN NNNN
 NNNNNNNNNNNNNNNNNNNNNNNNNN```
+```
+Do wyszukania numerów w pliku wystarczy jeden grep
+
+``` grep -E "PL[0-9]{2}( [0-9]{4}){6}|(PL [0-9]{2}( [0-9]{4}){6})|PL[0-9]{26}|[0-9]{2}( [0-9]{4}){6}|[0-9]{26}" ```
